@@ -1,13 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { startLogout } from '../actions/auth';
 
-const Header = () => (
+export const Header = ({ startLogout }) => (
   <header>
     <h1>ניהול הוצאות</h1>
     <NavLink to="/" activeClassName="selected" exact={true}> ראשי </NavLink>
     <NavLink to="/create" activeClassName="selected"> הוסף </NavLink>
     <NavLink to="/help" activeClassName="selected"> עזרה </NavLink>
+    <button onClick={startLogout}>התנתק</button>
   </header>
 );
 
-export default Header;
+const mapDispatchToProps = (dispatch) => ({
+  startLogout: () => dispatch(startLogout())
+});
+
+export default connect(undefined, mapDispatchToProps)(Header);
+// we dont need any state so the first is undefined.

@@ -27,5 +27,10 @@ exports[`should render Header correctly 1`] = `
   >
      עזרה 
   </NavLink>
+  <button
+    onClick={[Function]}
+  >
+    התנתק
+  </button>
 </header>
 `;
