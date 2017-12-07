@@ -1,28 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header correctly 1`] = `
-<header>
-  <h1>
-    ניהול הוצאות
-  </h1>
-  <NavLink
-    activeClassName="selected"
-    ariaCurrent="true"
-    to="/dashboard"
+<header
+  className="header"
+>
+  <div
+    className="content-container"
   >
-     ראשי 
-  </NavLink>
-  <NavLink
-    activeClassName="selected"
-    ariaCurrent="true"
-    to="/create"
-  >
-     הוסף 
-  </NavLink>
-  <button
-    onClick={[Function]}
-  >
-    התנתק
-  </button>
+    <div
+      className="header__content"
+    >
+      <Link
+        className="header__title"
+        replace={false}
+        to="/dashboard"
+      >
+        <h1>
+          ניהול הוצאות
+        </h1>
+      </Link>
+      <button
+        className="button button--link"
+        onClick={[Function]}
+      >
+        התנתק
+      </button>
+    </div>
+  </div>
 </header>
 `;
